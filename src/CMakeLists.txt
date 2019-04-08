@@ -1,4 +1,4 @@
-project (SigningApp)
+project (App)
 
 if (NOT MSVC)
 	add_definitions(-std=c++11)
@@ -28,7 +28,7 @@ file(GLOB SIGNING_APP_FORMS
 	"${CMAKE_CURRENT_SOURCE_DIR}/*.ui"
 )
 
-add_executable(SigningApp WIN32
+add_executable(App WIN32
 	${SIGNING_APP_SRCS}
 	${SIGNING_APP_HDRS}
 	${SIGNING_APP_FORMS}
@@ -42,7 +42,7 @@ set(SIGNING_APP_LIBRARIES
     OpenSSL::Crypto
 )
 
-target_link_libraries (SigningApp
+target_link_libraries (App
 	PRIVATE
 	${SIGNING_APP_LIBRARIES}
 )
